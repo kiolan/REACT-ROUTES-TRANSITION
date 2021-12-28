@@ -2,4 +2,5 @@ My Dot Files
 
 
 ``` 
-# Make a direc
+# Make a directory:
+mkdir ~/bin
