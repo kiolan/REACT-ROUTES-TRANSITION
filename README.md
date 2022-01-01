@@ -6,4 +6,6 @@ My Dot Files
 mkdir ~/bin
 
 # Change into new directory:
-c
+cd ~/bin
+
+# Git c
