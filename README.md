@@ -8,4 +8,4 @@ mkdir ~/bin
 # Change into new directory:
 cd ~/bin
 
-# Git c
+# Git clone this r
