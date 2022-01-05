@@ -9,4 +9,4 @@ mkdir ~/bin
 cd ~/bin
 
 # Git clone this repo:
-git clone git://gith
+git clone git://github.com/alyson
