@@ -9,4 +9,6 @@ mkdir ~/bin
 cd ~/bin
 
 # Git clone this repo:
-git clone git://github.com/alyson
+git clone git://github.com/alysonla/dotfiles.git
+
+# Cre
