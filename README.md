@@ -11,4 +11,4 @@ cd ~/bin
 # Git clone this repo:
 git clone git://github.com/alysonla/dotfiles.git
 
-# Create/validate exis
+# Create/validate existence for a fi
