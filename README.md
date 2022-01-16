@@ -15,4 +15,5 @@ git clone git://github.com/alysonla/dotfiles.git
 touch ~/.bashrc
 
 # Add the thing in the quotes to the .bashrc file:
-echo ". ~/bin/dotfiles/bashrc
+echo ". ~/bin/dotfiles/bashrc" >> ~/.bashrc
+
