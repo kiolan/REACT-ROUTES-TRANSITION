@@ -14,4 +14,5 @@ git clone git://github.com/alysonla/dotfiles.git
 # Create/validate existence for a file called .bashrc:
 touch ~/.bashrc
 
-# Add the thing in the quotes to the .bashrc file
+# Add the thing in the quotes to the .bashrc file:
+echo ". ~/bin
