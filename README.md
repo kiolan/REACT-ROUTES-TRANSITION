@@ -17,4 +17,4 @@ touch ~/.bashrc
 # Add the thing in the quotes to the .bashrc file:
 echo ". ~/bin/dotfiles/bashrc" >> ~/.bashrc
 
-# Create/validat
+# Create/validate existence fo
