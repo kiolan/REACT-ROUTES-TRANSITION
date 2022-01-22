@@ -18,4 +18,6 @@ touch ~/.bashrc
 echo ". ~/bin/dotfiles/bashrc" >> ~/.bashrc
 
 # Create/validate existence for a file called .bash_profile:
-touch ~/.
+touch ~/.bash_profile
+
+# Ad
