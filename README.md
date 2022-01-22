@@ -17,4 +17,4 @@ touch ~/.bashrc
 # Add the thing in the quotes to the .bashrc file:
 echo ". ~/bin/dotfiles/bashrc" >> ~/.bashrc
 
-# Create/validate existence for a file called 
+# Create/validate existence for a file called .bash_profi
