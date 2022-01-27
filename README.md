@@ -20,4 +20,4 @@ echo ". ~/bin/dotfiles/bashrc" >> ~/.bashrc
 # Create/validate existence for a file called .bash_profile:
 touch ~/.bash_profile
 
-# Add the thing in quotes
+# Add the thing in quotes below to the .bash
