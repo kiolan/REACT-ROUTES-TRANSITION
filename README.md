@@ -21,3 +21,4 @@ echo ". ~/bin/dotfiles/bashrc" >> ~/.bashrc
 touch ~/.bash_profile
 
 # Add the thing in quotes below to the .bash_profile file:
+echo ". ~/.ba
