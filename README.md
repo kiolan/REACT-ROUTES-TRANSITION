@@ -21,4 +21,6 @@ echo ". ~/bin/dotfiles/bashrc" >> ~/.bashrc
 touch ~/.bash_profile
 
 # Add the thing in quotes below to the .bash_profile file:
-echo ". ~/.bashrc" >> ~/.bash_pr
+echo ". ~/.bashrc" >> ~/.bash_profile
+
+# Run .bash_pr
