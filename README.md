@@ -24,4 +24,7 @@ touch ~/.bash_profile
 echo ". ~/.bashrc" >> ~/.bash_profile
 
 # Run .bash_profile:
-. ~/.bash_
+. ~/.bash_profile
+```
+
+!
