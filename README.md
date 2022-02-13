@@ -27,4 +27,4 @@ echo ". ~/.bashrc" >> ~/.bash_profile
 . ~/.bash_profile
 ```
 
-!
+![screen shot 
