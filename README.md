@@ -23,4 +23,5 @@ touch ~/.bash_profile
 # Add the thing in quotes below to the .bash_profile file:
 echo ". ~/.bashrc" >> ~/.bash_profile
 
-# Run .bash_pr
+# Run .bash_profile:
+. ~/.bash_
