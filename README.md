@@ -27,4 +27,4 @@ echo ". ~/.bashrc" >> ~/.bash_profile
 . ~/.bash_profile
 ```
 
-![screen shot 2014-12-05 at 3 22 04 pm](https://cloud.githubusercontent.com/assets/262395
+![screen shot 2014-12-05 at 3 22 04 pm](https://cloud.githubusercontent.com/assets/2623954/5324767/
