@@ -1,2 +1,2 @@
 
-alias reloa
+alias reload='. ~/.bashrc'
