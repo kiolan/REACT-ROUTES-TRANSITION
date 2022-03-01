@@ -1,3 +1,4 @@
 
 alias reload='. ~/.bashrc'
-alias ea="$EDITOR ~/bin/dotfiles/bash/aliases && r
+alias ea="$EDITOR ~/bin/dotfiles/bash/aliases && reload"
+alias ee="
