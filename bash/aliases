@@ -6,4 +6,6 @@ alias ef="$EDITOR ~/bin/dotfiles/bash/functions && reload"
 
 alias droid='say -v "Cellos"'
 
-alias '..
+alias '..'='cd ..'
+
+alias me
