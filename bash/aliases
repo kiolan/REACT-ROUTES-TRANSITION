@@ -4,4 +4,4 @@ alias ea="$EDITOR ~/bin/dotfiles/bash/aliases && reload"
 alias ee="$EDITOR ~/bin/dotfiles/bash/env && reload"
 alias ef="$EDITOR ~/bin/dotfiles/bash/functions && reload"
 
-alias droi
+alias droid='say -v "Cellos
