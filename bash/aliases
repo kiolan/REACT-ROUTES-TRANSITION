@@ -8,4 +8,6 @@ alias droid='say -v "Cellos"'
 
 alias '..'='cd ..'
 
-alias me='cd ~/Dropbox/devel
+alias me='cd ~/Dropbox/development/ruby/me'
+
+# Bu
