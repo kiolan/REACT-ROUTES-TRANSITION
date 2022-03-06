@@ -8,4 +8,4 @@ alias droid='say -v "Cellos"'
 
 alias '..'='cd ..'
 
-alias me
+alias me='cd ~/Dropbox/devel
