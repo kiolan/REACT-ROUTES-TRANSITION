@@ -10,4 +10,5 @@ alias '..'='cd ..'
 
 alias me='cd ~/Dropbox/development/ruby/me'
 
-# Bu
+# Bundler
+ali
