@@ -13,4 +13,5 @@ alias me='cd ~/Dropbox/development/ruby/me'
 # Bundler
 alias bx='bundle exec'
 alias b='bundle'
-alias bo='
+alias bo='bundle open'
+alia
