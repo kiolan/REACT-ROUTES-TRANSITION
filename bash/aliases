@@ -11,4 +11,5 @@ alias '..'='cd ..'
 alias me='cd ~/Dropbox/development/ruby/me'
 
 # Bundler
-alias bx='bundle 
+alias bx='bundle exec'
+alias b='
