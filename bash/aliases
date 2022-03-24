@@ -19,4 +19,5 @@ alias bu='bundle update'
 alias pass='passenger start'
 
 alias h='heroku'
+alias pam='polyamory'
 alias
