@@ -20,4 +20,4 @@ alias pass='passenger start'
 
 alias h='heroku'
 alias pam='polyamory'
-alias
+alias repos='cd ~/repo
