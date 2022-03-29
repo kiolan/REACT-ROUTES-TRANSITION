@@ -21,4 +21,5 @@ alias pass='passenger start'
 alias h='heroku'
 alias pam='polyamory'
 alias repos='cd ~/repos'
-alias proj='cd
+alias proj='cd ~/projects'
+a
