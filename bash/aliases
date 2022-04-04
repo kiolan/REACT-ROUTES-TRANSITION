@@ -22,4 +22,4 @@ alias h='heroku'
 alias pam='polyamory'
 alias repos='cd ~/repos'
 alias proj='cd ~/projects'
-alias clone='cd 
+alias clone='cd ~/repos && git clon
