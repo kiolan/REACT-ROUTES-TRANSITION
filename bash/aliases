@@ -25,4 +25,4 @@ alias proj='cd ~/projects'
 alias clone='cd ~/repos && git clone $1'
 
 # Projects
-alias sp='cd ~/p
+alias sp='cd ~/projects/speake
