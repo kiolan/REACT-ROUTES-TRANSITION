@@ -26,4 +26,5 @@ alias clone='cd ~/repos && git clone $1'
 
 # Projects
 alias sp='cd ~/projects/speakerdeck'
-alias ga='cd ~/projects/gau
+alias ga='cd ~/projects/gauges'
+alias 
