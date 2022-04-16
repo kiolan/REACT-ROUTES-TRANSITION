@@ -28,4 +28,5 @@ alias clone='cd ~/repos && git clone $1'
 alias sp='cd ~/projects/speakerdeck'
 alias ga='cd ~/projects/gauges'
 alias harm='cd ~/projects/harmony'
-alias mm='cd ~/projects/mongomappe
+alias mm='cd ~/projects/mongomapper'
+alias ad='
