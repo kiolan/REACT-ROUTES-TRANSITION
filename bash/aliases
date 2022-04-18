@@ -30,4 +30,5 @@ alias ga='cd ~/projects/gauges'
 alias harm='cd ~/projects/harmony'
 alias mm='cd ~/projects/mongomapper'
 alias ad='cd ~/projects/adapter'
-alias ts='cd ~/project
+alias ts='cd ~/projects/toystore'
+alias
