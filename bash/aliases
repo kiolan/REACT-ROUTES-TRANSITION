@@ -31,4 +31,5 @@ alias harm='cd ~/projects/harmony'
 alias mm='cd ~/projects/mongomapper'
 alias ad='cd ~/projects/adapter'
 alias ts='cd ~/projects/toystore'
-alias tmo='cd ~/projects/toystore-mongo
+alias tmo='cd ~/projects/toystore-mongo'
+alias plu='cd ~
