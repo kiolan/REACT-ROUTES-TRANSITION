@@ -36,4 +36,5 @@ alias plu='cd ~/projects/plucky'
 alias joint='cd ~/projects/joint'
 alias bonds='cd ~/projects/bonds'
 
-# Gen
+# General
+alias l='
