@@ -37,4 +37,5 @@ alias joint='cd ~/projects/joint'
 alias bonds='cd ~/projects/bonds'
 
 # General
-alias l='
+alias l='ls -lah'
+alias c='
