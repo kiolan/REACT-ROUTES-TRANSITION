@@ -40,4 +40,5 @@ alias bonds='cd ~/projects/bonds'
 alias l='ls -lah'
 alias c='clear'
 alias o='open .'
-alias e='sub
+alias e='subl'
+alias tf='tail -f 
