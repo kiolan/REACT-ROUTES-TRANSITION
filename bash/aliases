@@ -41,4 +41,5 @@ alias l='ls -lah'
 alias c='clear'
 alias o='open .'
 alias e='subl'
-alias tf='tail -f 
+alias tf='tail -f -n 100'
+alias http
