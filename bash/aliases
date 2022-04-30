@@ -42,4 +42,6 @@ alias c='clear'
 alias o='open .'
 alias e='subl'
 alias tf='tail -f -n 100'
-alias httpdump='sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E "Host\: 
+alias httpdump='sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E "Host\: .*|GET \/.*"'
+
+# 
