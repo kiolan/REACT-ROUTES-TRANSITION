@@ -47,4 +47,4 @@ alias httpdump='sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E "Host\: .*|GET 
 # GIT
 alias gb='git branch'
 alias gl='git log'
-alias g
+alias glo='git log --onelin
