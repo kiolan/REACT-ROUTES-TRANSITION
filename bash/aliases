@@ -49,4 +49,5 @@ alias gb='git branch'
 alias gl='git log'
 alias glo='git log --oneline'
 alias gc='git commit -v'
-alias gca='git commit -v
+alias gca='git commit -v -a'
+alias
