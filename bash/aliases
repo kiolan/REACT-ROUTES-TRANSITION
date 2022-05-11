@@ -51,4 +51,5 @@ alias glo='git log --oneline'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
 alias gcam='git commit --amend'
-alias d=
+alias d='git diff'
+alia
