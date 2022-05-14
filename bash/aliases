@@ -53,3 +53,4 @@ alias gca='git commit -v -a'
 alias gcam='git commit --amend'
 alias d='git diff'
 alias gp='git pull'
+alias gpr='git
