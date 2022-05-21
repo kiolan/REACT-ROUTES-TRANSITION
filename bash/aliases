@@ -56,4 +56,5 @@ alias gp='git pull'
 alias gpr='git pull --rebase'
 alias gpu='git push'
 alias s='git status'
-alias gss='gi
+alias gss='git stash save'
+alias
