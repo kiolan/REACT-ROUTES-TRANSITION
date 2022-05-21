@@ -55,4 +55,5 @@ alias d='git diff'
 alias gp='git pull'
 alias gpr='git pull --rebase'
 alias gpu='git push'
-alias s='git stat
+alias s='git status'
+alias gss='gi
