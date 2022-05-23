@@ -57,4 +57,4 @@ alias gpr='git pull --rebase'
 alias gpu='git push'
 alias s='git status'
 alias gss='git stash save'
-alias
+alias gsa='git stash ap
