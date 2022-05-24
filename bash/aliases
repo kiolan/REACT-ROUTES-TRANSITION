@@ -58,4 +58,4 @@ alias gpu='git push'
 alias s='git status'
 alias gss='git stash save'
 alias gsa='git stash apply'
-alias gsp
+alias gsp='git stash
