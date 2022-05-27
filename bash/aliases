@@ -60,4 +60,4 @@ alias gss='git stash save'
 alias gsa='git stash apply'
 alias gsp='git stash pop'
 alias gsl='git stash list'
-alias grc='
+alias grc='git rebase
