@@ -59,4 +59,4 @@ alias s='git status'
 alias gss='git stash save'
 alias gsa='git stash apply'
 alias gsp='git stash pop'
-alias gsl='g
+alias gsl='git stash list
