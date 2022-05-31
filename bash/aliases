@@ -62,4 +62,4 @@ alias gsp='git stash pop'
 alias gsl='git stash list'
 alias grc='git rebase --continue'
 alias gri='git rebase --interactive'
-alias g
+alias gpuh='git push 
