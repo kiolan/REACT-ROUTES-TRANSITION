@@ -65,4 +65,4 @@ alias gri='git rebase --interactive'
 alias gpuh='git push heroku master'
 
 # SVN
-alias svnclear='find . 
+alias svnclear='find . -name .svn -pri
