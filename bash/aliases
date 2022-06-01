@@ -62,4 +62,7 @@ alias gsp='git stash pop'
 alias gsl='git stash list'
 alias grc='git rebase --continue'
 alias gri='git rebase --interactive'
-alias gpuh='git push heroku maste
+alias gpuh='git push heroku master'
+
+# SVN
+alia
