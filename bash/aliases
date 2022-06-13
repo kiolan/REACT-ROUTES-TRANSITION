@@ -72,4 +72,5 @@ alias svnaddall='svn status | grep "^\?" | awk "{print \$2}" | xargs svn add'
 alias ge='gem open' # gem install gem-browse
 alias irb='irb --readline -r irb/completion'
 alias i='irb -rubygems'
-alias ss='scrip
+alias ss='script/server'
+alias st
