@@ -74,3 +74,4 @@ alias irb='irb --readline -r irb/completion'
 alias i='irb -rubygems'
 alias ss='script/server'
 alias st='script/test'
+alias sc='scrip
