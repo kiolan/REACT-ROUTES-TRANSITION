@@ -73,4 +73,4 @@ alias ge='gem open' # gem install gem-browse
 alias irb='irb --readline -r irb/completion'
 alias i='irb -rubygems'
 alias ss='script/server'
-alias st
+alias st='script/test'
