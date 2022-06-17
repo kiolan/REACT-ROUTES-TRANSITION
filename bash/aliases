@@ -75,4 +75,4 @@ alias i='irb -rubygems'
 alias ss='script/server'
 alias st='script/test'
 alias sc='script/console'
-alias sg='scr
+alias sg='script/generat
