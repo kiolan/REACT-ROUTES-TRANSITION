@@ -77,4 +77,5 @@ alias st='script/test'
 alias sc='script/console'
 alias sg='script/generate'
 alias r='rake'
-alias rt=
+alias rt='rake -T'
+alias mig
