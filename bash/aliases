@@ -79,4 +79,4 @@ alias sg='script/generate'
 alias r='rake'
 alias rt='rake -T'
 alias migrate='rake db:migrate db:test:prepare'
-alias remigrate=
+alias remigrate='rake db:drop 
