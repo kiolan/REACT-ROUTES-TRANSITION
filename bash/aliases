@@ -82,4 +82,4 @@ alias migrate='rake db:migrate db:test:prepare'
 alias remigrate='rake db:drop db:create db:migrate'
 
 alias mstart='sudo mongod --dbpath /data/db'
-alias 
+alias memstart='memcac
