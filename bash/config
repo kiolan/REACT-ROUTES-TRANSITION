@@ -4,4 +4,4 @@
 # PS1="$RED\$(date +%H:%M) \w$YELLOW \$(parse_git_branch)$GREEN\$ "
 
 function __git_dirty {
-  git diff --q
+  git diff --quiet HEAD &>/de
