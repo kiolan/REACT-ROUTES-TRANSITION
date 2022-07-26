@@ -8,4 +8,5 @@ function __git_dirty {
   [ $? == 1 ] && echo "!"
 }
 
-function __
+function __git_branch {
+  __
