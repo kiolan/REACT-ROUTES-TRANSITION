@@ -9,4 +9,7 @@ function __git_dirty {
 }
 
 function __git_branch {
-  __
+  __git_ps1 "(%s)"
+}
+
+bash_p
