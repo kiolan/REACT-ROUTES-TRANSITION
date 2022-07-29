@@ -13,4 +13,4 @@ function __git_branch {
 }
 
 bash_prompt() {
-  local N
+  local NONE="\[\033[0m
