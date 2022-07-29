@@ -13,4 +13,4 @@ function __git_branch {
 }
 
 bash_prompt() {
-  local NONE="\[\033[0m
+  local NONE="\[\033[0m\]"    # unsets co
