@@ -16,3 +16,4 @@ bash_prompt() {
   local NONE="\[\033[0m\]"    # unsets color to term's fg color
 
   # regular colors
+  local K="\[\03
