@@ -20,4 +20,4 @@ bash_prompt() {
   local R="\[\033[0;31m\]"    # red
   local G="\[\033[0;32m\]"    # green
   local Y="\[\033[0;33m\]"    # yellow
-  
+  local B="\[\033
