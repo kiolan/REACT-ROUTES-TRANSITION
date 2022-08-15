@@ -22,4 +22,4 @@ bash_prompt() {
   local Y="\[\033[0;33m\]"    # yellow
   local B="\[\033[0;34m\]"    # blue
   local M="\[\033[0;35m\]"    # magenta
-  local C="\[\0
+  local C="\[\033[0;36m\]"
