@@ -23,4 +23,6 @@ bash_prompt() {
   local B="\[\033[0;34m\]"    # blue
   local M="\[\033[0;35m\]"    # magenta
   local C="\[\033[0;36m\]"    # cyan
-  local W="\[\033[0;37m\]"    
+  local W="\[\033[0;37m\]"    # white
+
+  local UC
