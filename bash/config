@@ -25,4 +25,4 @@ bash_prompt() {
   local C="\[\033[0;36m\]"    # cyan
   local W="\[\033[0;37m\]"    # white
 
-  local UC
+  local UC=$W         
