@@ -26,4 +26,4 @@ bash_prompt() {
   local W="\[\033[0;37m\]"    # white
 
   local UC=$W                 # user's color
-  [ $UID -eq "0" ] && UC=$R   
+  [ $UID -eq "0" ] && UC=$R   # root's color
