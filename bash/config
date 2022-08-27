@@ -27,3 +27,5 @@ bash_prompt() {
 
   local UC=$W                 # user's color
   [ $UID -eq "0" ] && UC=$R   # root's color
+
+  PS1="\A $W$R\w $Y
