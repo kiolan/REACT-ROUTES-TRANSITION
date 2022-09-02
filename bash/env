@@ -1,2 +1,2 @@
 export PATH=~/bin:$PATH
-ex
+export EDITOR='co
