@@ -1,3 +1,3 @@
 export PATH=~/bin:$PATH
 export EDITOR='code -n -w'
-export
+export BUNDLER_EDITOR
