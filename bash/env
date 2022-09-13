@@ -1,4 +1,6 @@
 export PATH=~/bin:$PATH
 export EDITOR='code -n -w'
 export BUNDLER_EDITOR='code -n'
-export HISTCONTROL=er
+export HISTCONTROL=erasedups
+
+expor
