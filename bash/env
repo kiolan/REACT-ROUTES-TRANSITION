@@ -3,4 +3,5 @@ export EDITOR='code -n -w'
 export BUNDLER_EDITOR='code -n'
 export HISTCONTROL=erasedups
 
-export RUBY_HEAP_MIN_SLOTS=
+export RUBY_HEAP_MIN_SLOTS=800000
+export RU
