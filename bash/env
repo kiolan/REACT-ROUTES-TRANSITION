@@ -5,4 +5,4 @@ export HISTCONTROL=erasedups
 
 export RUBY_HEAP_MIN_SLOTS=800000
 export RUBY_HEAP_FREE_MIN=100000
-export
+export RUBY_HEAP_SLO
