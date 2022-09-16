@@ -4,4 +4,4 @@ export BUNDLER_EDITOR='code -n'
 export HISTCONTROL=erasedups
 
 export RUBY_HEAP_MIN_SLOTS=800000
-export RU
+export RUBY_HEAP_FREE_
