@@ -1,0 +1,7 @@
+
+# grep through history
+function hf() { 
+	history | grep $1
+}
+
+# appends your key to a server's authorized keys file
