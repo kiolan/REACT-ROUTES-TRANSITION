@@ -39,3 +39,8 @@ function unslow_port {
   sudo ipfw delete 1
   echo "Port succesfully un-slowed."
 }
+
+###### Prompt colors and git branch
+function parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
