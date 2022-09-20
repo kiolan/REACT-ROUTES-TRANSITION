@@ -5,3 +5,21 @@ function hf() {
 }
 
 # appends your key to a server's authorized keys file
+function authme {
+	ssh $1 'cat >>.ssh/authorized_keys' <~/.ssh/id_rsa.pub
+}
+
+# opens new tab in terminal to same directory as current
+function nt {
+  terminal_clone_command="
+tell application \"Terminal\"
+  tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down
+  do script with command \"cd `pwd`; clear\" in  selected tab of the front window
+end tell
+"
+  echo "$terminal_clone_command" | osascript &>/dev/null
+}
+
+# Make port 80 "real life" speeds. You can also use Mongrel ports.
+function slow_port {
+  # Set the port variable if no port inputted. Defaulted to 80 (for Passenger).
