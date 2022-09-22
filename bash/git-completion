@@ -49,3 +49,17 @@
 #       indicates you have diverged.  You can further control
 #       behaviour by setting GIT_PS1_SHOWUPSTREAM to a space-separated
 #       list of values:
+#           verbose       show number of commits ahead/behind (+/-) upstream
+#           legacy        don't use the '--count' option available in recent
+#                         versions of git-rev-list
+#           git           always compare HEAD to @{upstream}
+#           svn           always compare HEAD to your SVN upstream
+#       By default, __git_ps1 will compare HEAD to your SVN upstream
+#       if it can find one, or @{upstream} otherwise.  Once you have
+#       set GIT_PS1_SHOWUPSTREAM, you can override it on a
+#       per-repository basis by setting the bash.showUpstream config
+#       variable.
+#
+#
+# To submit patches:
+#
