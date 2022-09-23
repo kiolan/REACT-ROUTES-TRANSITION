@@ -96,3 +96,16 @@ __gitdir ()
     echo "$1"
   fi
 }
+
+# stores the divergence from upstream in $p
+# used by GIT_PS1_SHOWUPSTREAM
+__git_ps1_show_upstream ()
+{
+  local key value
+  local svn_remote=() svn_url_pattern count n
+  local upstream=git legacy="" verbose=""
+
+  # get some config options from git-config
+  while read key value; do
+    case "$key" in
+    bash.showupstream)
