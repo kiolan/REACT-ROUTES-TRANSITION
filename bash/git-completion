@@ -63,3 +63,19 @@
 #
 # To submit patches:
 #
+#    *) Read Documentation/SubmittingPatches
+#    *) Send all patches to the current maintainer:
+#
+#       "Shawn O. Pearce" <spearce@spearce.org>
+#
+#    *) Always CC the Git mailing list:
+#
+#       git@vger.kernel.org
+#
+
+case "$COMP_WORDBREAKS" in
+*:*) : great ;;
+*)   COMP_WORDBREAKS="$COMP_WORDBREAKS:"
+esac
+
+# __gitdir accepts 0 or 1 arguments (i.e., location)
