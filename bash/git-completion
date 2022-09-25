@@ -135,3 +135,14 @@ __git_ps1_show_upstream ()
   # Find our upstream
   case "$upstream" in
   git)    upstream="@{upstream}" ;;
+  svn*)
+    # get the upstream from the "git-svn-id: ..." in a commit message
+    # (git-svn uses essentially the same procedure internally)
+    local svn_upstream=($(git log --first-parent -1 \
+          --grep="^git-svn-id: \(${svn_url_pattern:2}\)" 2>/dev/null))
+    if [[ 0 -ne ${#svn_upstream[@]} ]]; then
+      svn_upstream=${svn_upstream[ ${#svn_upstream[@]} - 2 ]}
+      svn_upstream=${svn_upstream%@*}
+      for ((n=1; "$n" <= "${#svn_remote[@]}"; ++n)); do
+        svn_upstream=${svn_upstream#${svn_remote[$n]}}
+      done
