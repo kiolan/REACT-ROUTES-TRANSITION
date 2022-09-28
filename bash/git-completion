@@ -197,3 +197,18 @@ __git_ps1_show_upstream ()
       p="<" ;;
     *)      # diverged from upstream
       p="<>" ;;
+    esac
+  else
+    case "$count" in
+    "") # no upstream
+      p="" ;;
+    "0  0") # equal to upstream
+      p=" u=" ;;
+    "0  "*) # ahead of upstream
+      p=" u+${count#0  }" ;;
+    *"  0") # behind upstream
+      p=" u-${count%  0}" ;;
+    *)      # diverged from upstream
+      p=" u+${count#*  }-${count%  *}" ;;
+    esac
+  fi
