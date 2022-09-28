@@ -146,3 +146,23 @@ __git_ps1_show_upstream ()
       for ((n=1; "$n" <= "${#svn_remote[@]}"; ++n)); do
         svn_upstream=${svn_upstream#${svn_remote[$n]}}
       done
+
+      if [[ -z "$svn_upstream" ]]; then
+        # default branch name for checkouts with no layout:
+        upstream=${GIT_SVN_ID:-git-svn}
+      else
+        upstream=${svn_upstream#/}
+      fi
+    elif [[ "svn+git" = "$upstream" ]]; then
+      upstream="@{upstream}"
+    fi
+    ;;
+  esac
+
+  # Find how many commits we are ahead/behind our upstream
+  if [[ -z "$legacy" ]]; then
+    count="$(git rev-list --count --left-right \
+        "$upstream"...HEAD 2>/dev/null)"
+  else
+    # produce equivalent output to --count for older versions of git
+    local commits
