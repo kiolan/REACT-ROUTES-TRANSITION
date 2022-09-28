@@ -166,3 +166,19 @@ __git_ps1_show_upstream ()
   else
     # produce equivalent output to --count for older versions of git
     local commits
+    if commits="$(git rev-list --left-right "$upstream"...HEAD 2>/dev/null)"
+    then
+      local commit behind=0 ahead=0
+      for commit in $commits
+      do
+        case "$commit" in
+        "<"*) let ++behind
+          ;;
+        *)    let ++ahead
+          ;;
+        esac
+      done
+      count="$behind  $ahead"
+    else
+      count=""
+    fi
