@@ -212,3 +212,20 @@ __git_ps1_show_upstream ()
       p=" u+${count#*  }-${count%  *}" ;;
     esac
   fi
+
+}
+
+
+# __git_ps1 accepts 0 or 1 arguments (i.e., format string)
+# returns text to add to bash PS1 prompt (includes branch name)
+__git_ps1 ()
+{
+  local g="$(__gitdir)"
+  if [ -n "$g" ]; then
+    local r=""
+    local b=""
+    if [ -f "$g/rebase-merge/interactive" ]; then
+      r="|REBASE-i"
+      b="$(cat "$g/rebase-merge/head-name")"
+    elif [ -d "$g/rebase-merge" ]; then
+      r="|REBASE-m"
