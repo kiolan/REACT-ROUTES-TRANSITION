@@ -291,3 +291,25 @@ __git_ps1 ()
       fi
       if [ -n "${GIT_PS1_SHOWSTASHSTATE-}" ]; then
               git rev-parse --verify refs/stash >/dev/null 2>&1 && s="$"
+      fi
+
+      if [ -n "${GIT_PS1_SHOWUNTRACKEDFILES-}" ]; then
+         if [ -n "$(git ls-files --others --exclude-standard)" ]; then
+            u="%"
+         fi
+      fi
+
+      if [ -n "${GIT_PS1_SHOWUPSTREAM-}" ]; then
+        __git_ps1_show_upstream
+      fi
+    fi
+
+    local f="$w$i$s$u"
+    printf "${1:- (%s)}" "$c${b##refs/heads/}${f:+ $f}$r$p"
+  fi
+}
+
+# __gitcomp_1 requires 2 arguments
+__gitcomp_1 ()
+{
+  local c IFS=' '$'\t'$'\n'
