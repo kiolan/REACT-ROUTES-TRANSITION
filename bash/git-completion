@@ -337,3 +337,22 @@ __gitcomp ()
   *)
     local IFS=$'\n'
     COMPREPLY=($(compgen -P "${2-}" \
+      -W "$(__gitcomp_1 "${1-}" "${4-}")" \
+      -- "$cur"))
+    ;;
+  esac
+}
+
+# __git_heads accepts 0 or 1 arguments (to pass to __gitdir)
+__git_heads ()
+{
+  local cmd i is_hash=y dir="$(__gitdir "${1-}")"
+  if [ -d "$dir" ]; then
+    git --git-dir="$dir" for-each-ref --format='%(refname:short)' \
+      refs/heads
+    return
+  fi
+  for i in $(git ls-remote "${1-}" 2>/dev/null); do
+    case "$is_hash,$i" in
+    y,*) is_hash=n ;;
+    n,*^{}) is_hash=y ;;
