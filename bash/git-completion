@@ -356,3 +356,17 @@ __git_heads ()
     case "$is_hash,$i" in
     y,*) is_hash=n ;;
     n,*^{}) is_hash=y ;;
+    n,refs/heads/*) is_hash=y; echo "${i#refs/heads/}" ;;
+    n,*) is_hash=y; echo "$i" ;;
+    esac
+  done
+}
+
+# __git_tags accepts 0 or 1 arguments (to pass to __gitdir)
+__git_tags ()
+{
+  local cmd i is_hash=y dir="$(__gitdir "${1-}")"
+  if [ -d "$dir" ]; then
+    git --git-dir="$dir" for-each-ref --format='%(refname:short)' \
+      refs/tags
+    return
