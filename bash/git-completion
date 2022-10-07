@@ -323,3 +323,17 @@ __gitcomp_1 ()
 }
 
 # __gitcomp accepts 1, 2, 3, or 4 arguments
+# generates completion reply with compgen
+__gitcomp ()
+{
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  if [ $# -gt 2 ]; then
+    cur="$3"
+  fi
+  case "$cur" in
+  --*=)
+    COMPREPLY=()
+    ;;
+  *)
+    local IFS=$'\n'
+    COMPREPLY=($(compgen -P "${2-}" \
