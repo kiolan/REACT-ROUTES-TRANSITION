@@ -386,3 +386,18 @@ __git_refs ()
 {
   local i is_hash=y dir="$(__gitdir "${1-}")"
   local cur="${COMP_WORDS[COMP_CWORD]}" format refs
+  if [ -d "$dir" ]; then
+    case "$cur" in
+    refs|refs/*)
+      format="refname"
+      refs="${cur%/*}"
+      ;;
+    *)
+      for i in HEAD FETCH_HEAD ORIG_HEAD MERGE_HEAD; do
+        if [ -e "$dir/$i" ]; then echo $i; fi
+      done
+      format="refname:short"
+      refs="refs/tags refs/heads refs/remotes"
+      ;;
+    esac
+    git --git-dir="$dir" for-each-ref --format="%($format)" \
