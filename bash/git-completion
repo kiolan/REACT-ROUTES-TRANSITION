@@ -401,3 +401,13 @@ __git_refs ()
       ;;
     esac
     git --git-dir="$dir" for-each-ref --format="%($format)" \
+      $refs
+    return
+  fi
+  for i in $(git ls-remote "$dir" 2>/dev/null); do
+    case "$is_hash,$i" in
+    y,*) is_hash=n ;;
+    n,*^{}) is_hash=y ;;
+    n,refs/tags/*) is_hash=y; echo "${i#refs/tags/}" ;;
+    n,refs/heads/*) is_hash=y; echo "${i#refs/heads/}" ;;
+    n,refs/remotes/*) is_hash=y; echo "${i#refs/remotes/}" ;;
