@@ -418,3 +418,17 @@ __git_refs ()
 
 # __git_refs2 requires 1 argument (to pass to __git_refs)
 __git_refs2 ()
+{
+  local i
+  for i in $(__git_refs "$1"); do
+    echo "$i:$i"
+  done
+}
+
+# __git_refs_remotes requires 1 argument (to pass to ls-remote)
+__git_refs_remotes ()
+{
+  local cmd i is_hash=y
+  for i in $(git ls-remote "$1" 2>/dev/null); do
+    case "$is_hash,$i" in
+    n,refs/heads/*)
