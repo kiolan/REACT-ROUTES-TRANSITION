@@ -411,3 +411,10 @@ __git_refs ()
     n,refs/tags/*) is_hash=y; echo "${i#refs/tags/}" ;;
     n,refs/heads/*) is_hash=y; echo "${i#refs/heads/}" ;;
     n,refs/remotes/*) is_hash=y; echo "${i#refs/remotes/}" ;;
+    n,*) is_hash=y; echo "$i" ;;
+    esac
+  done
+}
+
+# __git_refs2 requires 1 argument (to pass to __git_refs)
+__git_refs2 ()
