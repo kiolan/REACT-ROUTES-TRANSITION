@@ -432,3 +432,28 @@ __git_refs_remotes ()
   for i in $(git ls-remote "$1" 2>/dev/null); do
     case "$is_hash,$i" in
     n,refs/heads/*)
+      is_hash=y
+      echo "$i:refs/remotes/$1/${i#refs/heads/}"
+      ;;
+    y,*) is_hash=n ;;
+    n,*^{}) is_hash=y ;;
+    n,refs/tags/*) is_hash=y;;
+    n,*) is_hash=y; ;;
+    esac
+  done
+}
+
+__git_remotes ()
+{
+  local i ngoff IFS=$'\n' d="$(__gitdir)"
+  shopt -q nullglob || ngoff=1
+  shopt -s nullglob
+  for i in "$d/remotes"/*; do
+    echo ${i#$d/remotes/}
+  done
+  [ "$ngoff" ] && shopt -u nullglob
+  for i in $(git --git-dir="$d" config --get-regexp 'remote\..*\.url' 2>/dev/null); do
+    i="${i#remote.}"
+    echo "${i/.url*/}"
+  done
+}
