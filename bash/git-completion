@@ -473,3 +473,18 @@ __git_list_merge_strategies ()
 __git_merge_strategies=
 # 'git merge -s help' (and thus detection of the merge strategy
 # list) fails, unfortunately, if run outside of any git working
+# tree.  __git_merge_strategies is set to the empty string in
+# that case, and the detection will be repeated the next time it
+# is needed.
+__git_compute_merge_strategies ()
+{
+  : ${__git_merge_strategies:=$(__git_list_merge_strategies)}
+}
+
+__git_complete_file ()
+{
+  local pfx ls ref cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  ?*:*)
+    ref="${cur%%:*}"
+    cur="${cur#*:}"
