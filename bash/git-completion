@@ -530,3 +530,8 @@ __git_complete_file ()
 }
 
 __git_complete_revlist ()
+{
+  local pfx cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  *...*)
+    pfx="${cur%...*}..."
