@@ -488,3 +488,27 @@ __git_complete_file ()
   ?*:*)
     ref="${cur%%:*}"
     cur="${cur#*:}"
+    case "$cur" in
+    ?*/*)
+      pfx="${cur%/*}"
+      cur="${cur##*/}"
+      ls="$ref:$pfx"
+      pfx="$pfx/"
+      ;;
+    *)
+      ls="$ref"
+      ;;
+      esac
+
+    case "$COMP_WORDBREAKS" in
+    *:*) : great ;;
+    *)   pfx="$ref:$pfx" ;;
+    esac
+
+    local IFS=$'\n'
+    COMPREPLY=($(compgen -P "$pfx" \
+      -W "$(git --git-dir="$(__gitdir)" ls-tree "$ls" \
+        | sed '/^100... blob /{
+                   s,^.*  ,,
+                   s,$, ,
+               }
