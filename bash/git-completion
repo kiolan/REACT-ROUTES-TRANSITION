@@ -512,3 +512,21 @@ __git_complete_file ()
                    s,^.*  ,,
                    s,$, ,
                }
+               /^120000 blob /{
+                   s,^.*  ,,
+                   s,$, ,
+               }
+               /^040000 tree /{
+                   s,^.*  ,,
+                   s,$,/,
+               }
+               s/^.*  //')" \
+      -- "$cur"))
+    ;;
+  *)
+    __gitcomp "$(__git_refs)"
+    ;;
+  esac
+}
+
+__git_complete_revlist ()
