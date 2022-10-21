@@ -535,3 +535,15 @@ __git_complete_revlist ()
   case "$cur" in
   *...*)
     pfx="${cur%...*}..."
+    cur="${cur#*...}"
+    __gitcomp "$(__git_refs)" "$pfx" "$cur"
+    ;;
+  *..*)
+    pfx="${cur%..*}.."
+    cur="${cur#*..}"
+    __gitcomp "$(__git_refs)" "$pfx" "$cur"
+    ;;
+  *)
+    __gitcomp "$(__git_refs)"
+    ;;
+  esac
