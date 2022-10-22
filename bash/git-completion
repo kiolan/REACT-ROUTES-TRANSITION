@@ -584,3 +584,17 @@ __git_complete_remote_or_refspec ()
   [ "$remote" = "." ] && remote=
   case "$cur" in
   *:*)
+    case "$COMP_WORDBREAKS" in
+    *:*) : great ;;
+    *)   pfx="${cur%%:*}:" ;;
+    esac
+    cur="${cur#*:}"
+    lhs=0
+    ;;
+  +*)
+    pfx="+"
+    cur="${cur#+}"
+    ;;
+  esac
+  case "$cmd" in
+  fetch)
