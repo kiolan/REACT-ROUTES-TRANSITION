@@ -571,3 +571,16 @@ __git_complete_remote_or_refspec ()
     -*) ;;
     *) remote="$i"; break ;;
     esac
+    c=$((++c))
+  done
+  if [ -z "$remote" ]; then
+    __gitcomp "$(__git_remotes)"
+    return
+  fi
+  if [ $no_complete_refspec = 1 ]; then
+    COMPREPLY=()
+    return
+  fi
+  [ "$remote" = "." ] && remote=
+  case "$cur" in
+  *:*)
