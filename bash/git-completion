@@ -598,3 +598,12 @@ __git_complete_remote_or_refspec ()
   esac
   case "$cmd" in
   fetch)
+    if [ $lhs = 1 ]; then
+      __gitcomp "$(__git_refs2 "$remote")" "$pfx" "$cur"
+    else
+      __gitcomp "$(__git_refs)" "$pfx" "$cur"
+    fi
+    ;;
+  pull)
+    if [ $lhs = 1 ]; then
+      __gitcomp "$(__git_refs "$remote")" "$pfx" "$cur"
