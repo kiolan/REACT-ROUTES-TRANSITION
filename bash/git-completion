@@ -607,3 +607,19 @@ __git_complete_remote_or_refspec ()
   pull)
     if [ $lhs = 1 ]; then
       __gitcomp "$(__git_refs "$remote")" "$pfx" "$cur"
+    else
+      __gitcomp "$(__git_refs)" "$pfx" "$cur"
+    fi
+    ;;
+  push)
+    if [ $lhs = 1 ]; then
+      __gitcomp "$(__git_refs)" "$pfx" "$cur"
+    else
+      __gitcomp "$(__git_refs "$remote")" "$pfx" "$cur"
+    fi
+    ;;
+  esac
+}
+
+__git_complete_strategy ()
+{
