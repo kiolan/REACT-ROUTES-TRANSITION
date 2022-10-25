@@ -623,3 +623,18 @@ __git_complete_remote_or_refspec ()
 
 __git_complete_strategy ()
 {
+  __git_compute_merge_strategies
+  case "${COMP_WORDS[COMP_CWORD-1]}" in
+  -s|--strategy)
+    __gitcomp "$__git_merge_strategies"
+    return 0
+  esac
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --strategy=*)
+    __gitcomp "$__git_merge_strategies" "" "${cur##--strategy=}"
+    return 0
+    ;;
+  esac
+  return 1
+}
