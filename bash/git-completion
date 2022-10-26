@@ -656,3 +656,19 @@ __git_compute_all_commands ()
 {
   : ${__git_all_commands:=$(__git_list_all_commands)}
 }
+
+__git_list_porcelain_commands ()
+{
+  local i IFS=" "$'\n'
+  __git_compute_all_commands
+  for i in "help" $__git_all_commands
+  do
+    case $i in
+    *--*)             : helper pattern;;
+    applymbox)        : ask gittus;;
+    applypatch)       : ask gittus;;
+    archimport)       : import;;
+    cat-file)         : plumbing;;
+    check-attr)       : plumbing;;
+    check-ref-format) : plumbing;;
+    checkout-index)   : plumbing;;
