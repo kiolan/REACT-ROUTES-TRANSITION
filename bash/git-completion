@@ -770,3 +770,17 @@ __git_aliased_command ()
   local word cmdline=$(git --git-dir="$(__gitdir)" \
     config --get "alias.$1")
   for word in $cmdline; do
+    case "$word" in
+    \!gitk|gitk)
+      echo "gitk"
+      return
+      ;;
+    \!*)  : shell command alias ;;
+    -*)  : option ;;
+    *=*)  : setting env ;;
+    git)  : git itself ;;
+    *)
+      echo "$word"
+      return
+    esac
+  done
