@@ -750,3 +750,23 @@ __git_compute_porcelain_commands ()
   __git_compute_all_commands
   : ${__git_porcelain_commands:=$(__git_list_porcelain_commands)}
 }
+
+__git_aliases ()
+{
+  local i IFS=$'\n'
+  for i in $(git --git-dir="$(__gitdir)" config --get-regexp "alias\..*" 2>/dev/null); do
+    case "$i" in
+    alias.*)
+      i="${i#alias.}"
+      echo "${i/ */}"
+      ;;
+    esac
+  done
+}
+
+# __git_aliased_command requires 1 argument
+__git_aliased_command ()
+{
+  local word cmdline=$(git --git-dir="$(__gitdir)" \
+    config --get "alias.$1")
+  for word in $cmdline; do
