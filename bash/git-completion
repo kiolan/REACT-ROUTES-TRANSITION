@@ -784,3 +784,24 @@ __git_aliased_command ()
       return
     esac
   done
+}
+
+# __git_find_on_cmdline requires 1 argument
+__git_find_on_cmdline ()
+{
+  local word subcommand c=1
+
+  while [ $c -lt $COMP_CWORD ]; do
+    word="${COMP_WORDS[c]}"
+    for subcommand in $1; do
+      if [ "$subcommand" = "$word" ]; then
+        echo "$subcommand"
+        return
+      fi
+    done
+    c=$((++c))
+  done
+}
+
+__git_has_doubledash ()
+{
