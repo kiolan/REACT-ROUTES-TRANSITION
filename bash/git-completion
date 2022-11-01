@@ -805,3 +805,22 @@ __git_find_on_cmdline ()
 
 __git_has_doubledash ()
 {
+  local c=1
+  while [ $c -lt $COMP_CWORD ]; do
+    if [ "--" = "${COMP_WORDS[c]}" ]; then
+      return 0
+    fi
+    c=$((++c))
+  done
+  return 1
+}
+
+__git_whitespacelist="nowarn warn error error-all fix"
+
+_git_am ()
+{
+  local cur="${COMP_WORDS[COMP_CWORD]}" dir="$(__gitdir)"
+  if [ -d "$dir"/rebase-apply ]; then
+    __gitcomp "--skip --continue --resolved --abort"
+    return
+  fi
