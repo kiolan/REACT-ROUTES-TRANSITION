@@ -840,3 +840,17 @@ _git_am ()
   esac
   COMPREPLY=()
 }
+
+_git_apply ()
+{
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --whitespace=*)
+    __gitcomp "$__git_whitespacelist" "" "${cur##--whitespace=}"
+    return
+    ;;
+  --*)
+    __gitcomp "
+      --stat --numstat --summary --check --index
+      --cached --index-info --reverse --reject --unidiff-zero
+      --apply --no-add --exclude=
