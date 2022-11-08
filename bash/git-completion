@@ -871,3 +871,17 @@ _git_add ()
   --*)
     __gitcomp "
       --interactive --refresh --patch --update --dry-run
+      --ignore-errors --intent-to-add
+      "
+    return
+  esac
+  COMPREPLY=()
+}
+
+_git_archive ()
+{
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --format=*)
+    __gitcomp "$(git archive --list)" "" "${cur##--format=}"
+    return
