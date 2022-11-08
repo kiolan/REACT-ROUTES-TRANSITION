@@ -900,3 +900,20 @@ _git_archive ()
   esac
   __git_complete_file
 }
+
+_git_bisect ()
+{
+  __git_has_doubledash && return
+
+  local subcommands="start bad good skip reset visualize replay log run"
+  local subcommand="$(__git_find_on_cmdline "$subcommands")"
+  if [ -z "$subcommand" ]; then
+    __gitcomp "$subcommands"
+    return
+  fi
+
+  case "$subcommand" in
+  bad|good|reset|skip)
+    __gitcomp "$(__git_refs)"
+    ;;
+  *)
