@@ -885,3 +885,18 @@ _git_archive ()
   --format=*)
     __gitcomp "$(git archive --list)" "" "${cur##--format=}"
     return
+    ;;
+  --remote=*)
+    __gitcomp "$(__git_remotes)" "" "${cur##--remote=}"
+    return
+    ;;
+  --*)
+    __gitcomp "
+      --format= --list --verbose
+      --prefix= --remote= --exec=
+      "
+    return
+    ;;
+  esac
+  __git_complete_file
+}
