@@ -936,3 +936,19 @@ _git_branch ()
   done
 
   case "${COMP_WORDS[COMP_CWORD]}" in
+  --*)
+    __gitcomp "
+      --color --no-color --verbose --abbrev= --no-abbrev
+      --track --no-track --contains --merged --no-merged
+      --set-upstream
+      "
+    ;;
+  *)
+    if [ $only_local_ref = "y" -a $has_r = "n" ]; then
+      __gitcomp "$(__git_heads)"
+    else
+      __gitcomp "$(__git_refs)"
+    fi
+    ;;
+  esac
+}
