@@ -952,3 +952,23 @@ _git_branch ()
     ;;
   esac
 }
+
+_git_bundle ()
+{
+  local cmd="${COMP_WORDS[2]}"
+  case "$COMP_CWORD" in
+  2)
+    __gitcomp "create list-heads verify unbundle"
+    ;;
+  3)
+    # looking for a file
+    ;;
+  *)
+    case "$cmd" in
+      create)
+        __git_complete_revlist
+      ;;
+    esac
+    ;;
+  esac
+}
