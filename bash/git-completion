@@ -972,3 +972,21 @@ _git_bundle ()
     ;;
   esac
 }
+
+_git_checkout ()
+{
+  __git_has_doubledash && return
+
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --conflict=*)
+    __gitcomp "diff3 merge" "" "${cur##--conflict=}"
+    ;;
+  --*)
+    __gitcomp "
+      --quiet --ours --theirs --track --no-track --merge
+      --conflict= --orphan --patch
+      "
+    ;;
+  *)
+    __gitcomp "$(__git_refs)"
