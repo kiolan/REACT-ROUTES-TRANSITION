@@ -1001,3 +1001,17 @@ _git_cherry ()
 
 _git_cherry_pick ()
 {
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --*)
+    __gitcomp "--edit --no-commit"
+    ;;
+  *)
+    __gitcomp "$(__git_refs)"
+    ;;
+  esac
+}
+
+_git_clean ()
+{
+  __git_has_doubledash && return
