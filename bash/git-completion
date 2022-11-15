@@ -1015,3 +1015,18 @@ _git_cherry_pick ()
 _git_clean ()
 {
   __git_has_doubledash && return
+
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --*)
+    __gitcomp "--dry-run --quiet"
+    return
+    ;;
+  esac
+  COMPREPLY=()
+}
+
+_git_clone ()
+{
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
