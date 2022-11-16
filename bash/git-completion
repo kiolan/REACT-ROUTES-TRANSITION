@@ -1030,3 +1030,16 @@ _git_clone ()
 {
   local cur="${COMP_WORDS[COMP_CWORD]}"
   case "$cur" in
+  --*)
+    __gitcomp "
+      --local
+      --no-hardlinks
+      --shared
+      --reference
+      --quiet
+      --no-checkout
+      --bare
+      --mirror
+      --origin
+      --upload-pack
+      --template=
