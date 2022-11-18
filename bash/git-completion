@@ -1059,3 +1059,16 @@ _git_commit ()
   case "$cur" in
   --cleanup=*)
     __gitcomp "default strip verbatim whitespace
+      " "" "${cur##--cleanup=}"
+    return
+    ;;
+  --reuse-message=*)
+    __gitcomp "$(__git_refs)" "" "${cur##--reuse-message=}"
+    return
+    ;;
+  --reedit-message=*)
+    __gitcomp "$(__git_refs)" "" "${cur##--reedit-message=}"
+    return
+    ;;
+  --untracked-files=*)
+    __gitcomp "all no normal" "" "${cur##--untracked-files=}"
