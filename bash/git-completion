@@ -1050,3 +1050,12 @@ _git_clone ()
   esac
   COMPREPLY=()
 }
+
+_git_commit ()
+{
+  __git_has_doubledash && return
+
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --cleanup=*)
+    __gitcomp "default strip verbatim whitespace
