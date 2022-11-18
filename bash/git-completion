@@ -1072,3 +1072,18 @@ _git_commit ()
     ;;
   --untracked-files=*)
     __gitcomp "all no normal" "" "${cur##--untracked-files=}"
+    return
+    ;;
+  --*)
+    __gitcomp "
+      --all --author= --signoff --verify --no-verify
+      --edit --amend --include --only --interactive
+      --dry-run --reuse-message= --reedit-message=
+      --reset-author --file= --message= --template=
+      --cleanup= --untracked-files --untracked-files=
+      --verbose --quiet
+      "
+    return
+  esac
+  COMPREPLY=()
+}
