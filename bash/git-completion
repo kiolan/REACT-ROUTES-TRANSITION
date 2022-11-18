@@ -1101,3 +1101,19 @@ _git_describe ()
   esac
   __gitcomp "$(__git_refs)"
 }
+
+__git_diff_common_options="--stat --numstat --shortstat --summary
+      --patch-with-stat --name-only --name-status --color
+      --no-color --color-words --no-renames --check
+      --full-index --binary --abbrev --diff-filter=
+      --find-copies-harder
+      --text --ignore-space-at-eol --ignore-space-change
+      --ignore-all-space --exit-code --quiet --ext-diff
+      --no-ext-diff
+      --no-prefix --src-prefix= --dst-prefix=
+      --inter-hunk-context=
+      --patience
+      --raw
+      --dirstat --dirstat= --dirstat-by-file
+      --dirstat-by-file= --cumulative
+"
