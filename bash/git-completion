@@ -1117,3 +1117,20 @@ __git_diff_common_options="--stat --numstat --shortstat --summary
       --dirstat --dirstat= --dirstat-by-file
       --dirstat-by-file= --cumulative
 "
+
+_git_diff ()
+{
+  __git_has_doubledash && return
+
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --*)
+    __gitcomp "--cached --staged --pickaxe-all --pickaxe-regex
+      --base --ours --theirs
+      $__git_diff_common_options
+      "
+    return
+    ;;
+  esac
+  __git_complete_file
+}
