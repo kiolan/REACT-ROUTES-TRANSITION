@@ -1134,3 +1134,17 @@ _git_diff ()
   esac
   __git_complete_file
 }
+
+__git_mergetools_common="diffuse ecmerge emerge kdiff3 meld opendiff
+      tkdiff vimdiff gvimdiff xxdiff araxis p4merge
+"
+
+_git_difftool ()
+{
+  __git_has_doubledash && return
+
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --tool=*)
+    __gitcomp "$__git_mergetools_common kompare" "" "${cur##--tool=}"
+    return
