@@ -1215,3 +1215,12 @@ _git_fsck ()
   local cur="${COMP_WORDS[COMP_CWORD]}"
   case "$cur" in
   --*)
+    __gitcomp "
+      --tags --root --unreachable --cache --no-reflogs --full
+      --strict --verbose --lost-found
+      "
+    return
+    ;;
+  esac
+  COMPREPLY=()
+}
