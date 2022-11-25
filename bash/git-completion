@@ -1224,3 +1224,14 @@ _git_fsck ()
   esac
   COMPREPLY=()
 }
+
+_git_gc ()
+{
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --*)
+    __gitcomp "--prune --aggressive"
+    return
+    ;;
+  esac
+  COMPREPLY=()
