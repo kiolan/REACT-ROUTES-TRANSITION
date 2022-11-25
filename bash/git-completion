@@ -1235,3 +1235,22 @@ _git_gc ()
     ;;
   esac
   COMPREPLY=()
+}
+
+_git_gitk ()
+{
+  _gitk
+}
+
+_git_grep ()
+{
+  __git_has_doubledash && return
+
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --*)
+    __gitcomp "
+      --cached
+      --text --ignore-case --word-regexp --invert-match
+      --full-name
+      --extended-regexp --basic-regexp --fixed-strings
