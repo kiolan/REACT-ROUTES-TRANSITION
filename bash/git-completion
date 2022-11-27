@@ -1284,3 +1284,21 @@ _git_help ()
     workflows
     "
 }
+
+_git_init ()
+{
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --shared=*)
+    __gitcomp "
+      false true umask group all world everybody
+      " "" "${cur##--shared=}"
+    return
+    ;;
+  --*)
+    __gitcomp "--quiet --bare --template= --shared --shared="
+    return
+    ;;
+  esac
+  COMPREPLY=()
+}
