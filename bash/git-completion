@@ -1321,3 +1321,13 @@ _git_ls_files ()
     ;;
   esac
   COMPREPLY=()
+}
+
+_git_ls_remote ()
+{
+  __gitcomp "$(__git_remotes)"
+}
+
+_git_ls_tree ()
+{
+  __git_complete_file
