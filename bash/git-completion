@@ -1302,3 +1302,22 @@ _git_init ()
   esac
   COMPREPLY=()
 }
+
+_git_ls_files ()
+{
+  __git_has_doubledash && return
+
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --*)
+    __gitcomp "--cached --deleted --modified --others --ignored
+      --stage --directory --no-empty-directory --unmerged
+      --killed --exclude= --exclude-from=
+      --exclude-per-directory= --exclude-standard
+      --error-unmatch --with-tree= --full-name
+      --abbrev --ignored --exclude-per-directory
+      "
+    return
+    ;;
+  esac
+  COMPREPLY=()
