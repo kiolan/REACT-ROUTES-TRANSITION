@@ -1401,3 +1401,16 @@ _git_log ()
       --decorate --decorate=
       --walk-reflogs
       --parents --children
+      $merge
+      $__git_diff_common_options
+      --pickaxe-all --pickaxe-regex
+      "
+    return
+    ;;
+  esac
+  __git_complete_revlist
+}
+
+__git_merge_options="
+  --no-commit --no-stat --log --no-log --squash --strategy
+  --commit --stat --no-squash --ff --no-ff --ff-only
