@@ -1375,3 +1375,15 @@ _git_log ()
     ;;
   --format=*)
     __gitcomp "$__git_log_pretty_formats
+      " "" "${cur##--format=}"
+    return
+    ;;
+  --date=*)
+    __gitcomp "$__git_log_date_formats" "" "${cur##--date=}"
+    return
+    ;;
+  --decorate=*)
+    __gitcomp "long short" "" "${cur##--decorate=}"
+    return
+    ;;
+  --*)
