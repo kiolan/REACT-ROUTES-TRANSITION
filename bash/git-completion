@@ -1427,3 +1427,22 @@ _git_merge ()
     return
   esac
   __gitcomp "$(__git_refs)"
+}
+
+_git_mergetool ()
+{
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --tool=*)
+    __gitcomp "$__git_mergetools_common tortoisemerge" "" "${cur##--tool=}"
+    return
+    ;;
+  --*)
+    __gitcomp "--tool="
+    return
+    ;;
+  esac
+  COMPREPLY=()
+}
+
+_git_merge_base ()
