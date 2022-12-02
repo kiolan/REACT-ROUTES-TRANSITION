@@ -1484,3 +1484,23 @@ _git_notes ()
     ;;
   esac
 }
+
+_git_pull ()
+{
+  __git_complete_strategy && return
+
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --*)
+    __gitcomp "
+      --rebase --no-rebase
+      $__git_merge_options
+      $__git_fetch_options
+    "
+    return
+    ;;
+  esac
+  __git_complete_remote_or_refspec
+}
+
+_git_push ()
