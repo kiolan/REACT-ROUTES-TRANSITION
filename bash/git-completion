@@ -1504,3 +1504,22 @@ _git_pull ()
 }
 
 _git_push ()
+{
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "${COMP_WORDS[COMP_CWORD-1]}" in
+  --repo)
+    __gitcomp "$(__git_remotes)"
+    return
+  esac
+  case "$cur" in
+  --repo=*)
+    __gitcomp "$(__git_remotes)" "" "${cur##--repo=}"
+    return
+    ;;
+  --*)
+    __gitcomp "
+      --all --mirror --tags --dry-run --force --verbose
+      --receive-pack= --repo=
+    "
+    return
+    ;;
