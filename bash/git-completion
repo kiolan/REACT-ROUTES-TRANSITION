@@ -1465,3 +1465,12 @@ _git_mv ()
 _git_name_rev ()
 {
   __gitcomp "--tags --all --stdin"
+}
+
+_git_notes ()
+{
+  local subcommands="edit show"
+  if [ -z "$(__git_find_on_cmdline "$subcommands")" ]; then
+    __gitcomp "$subcommands"
+    return
+  fi
