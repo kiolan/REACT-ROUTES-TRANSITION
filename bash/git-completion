@@ -1474,3 +1474,13 @@ _git_notes ()
     __gitcomp "$subcommands"
     return
   fi
+
+  case "${COMP_WORDS[COMP_CWORD-1]}" in
+  -m|-F)
+    COMPREPLY=()
+    ;;
+  *)
+    __gitcomp "$(__git_refs)"
+    ;;
+  esac
+}
