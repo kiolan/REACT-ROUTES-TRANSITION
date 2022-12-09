@@ -1600,3 +1600,19 @@ _git_stage ()
 }
 
 __git_config_get_set_variables ()
+{
+  local prevword word config_file= c=$COMP_CWORD
+  while [ $c -gt 1 ]; do
+    word="${COMP_WORDS[c]}"
+    case "$word" in
+    --global|--system|--file=*)
+      config_file="$word"
+      break
+      ;;
+    -f|--file)
+      config_file="$word $prevword"
+      break
+      ;;
+    esac
+    prevword=$word
+    c=$((--c))
