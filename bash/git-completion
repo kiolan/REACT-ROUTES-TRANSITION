@@ -1538,3 +1538,20 @@ _git_rebase ()
   case "$cur" in
   --whitespace=*)
     __gitcomp "$__git_whitespacelist" "" "${cur##--whitespace=}"
+    return
+    ;;
+  --*)
+    __gitcomp "
+      --onto --merge --strategy --interactive
+      --preserve-merges --stat --no-stat
+      --committer-date-is-author-date --ignore-date
+      --ignore-whitespace --whitespace=
+      --autosquash
+      "
+
+    return
+  esac
+  __gitcomp "$(__git_refs)"
+}
+
+__git_send_email_confirm_options="always never auto cc compose"
