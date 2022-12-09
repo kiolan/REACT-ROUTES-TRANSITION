@@ -1569,3 +1569,16 @@ _git_send_email ()
     ;;
   --suppress-cc=*)
     __gitcomp "
+      $__git_send_email_suppresscc_options
+      " "" "${cur##--suppress-cc=}"
+
+    return
+    ;;
+  --smtp-encryption=*)
+    __gitcomp "ssl tls" "" "${cur##--smtp-encryption=}"
+    return
+    ;;
+  --*)
+    __gitcomp "--annotate --bcc --cc --cc-cmd --chain-reply-to
+      --compose --confirm= --dry-run --envelope-sender
+      --from --identity
