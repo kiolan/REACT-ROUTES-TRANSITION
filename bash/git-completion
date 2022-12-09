@@ -1555,3 +1555,17 @@ _git_rebase ()
 }
 
 __git_send_email_confirm_options="always never auto cc compose"
+__git_send_email_suppresscc_options="author self cc bodycc sob cccmd body all"
+
+_git_send_email ()
+{
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --confirm=*)
+    __gitcomp "
+      $__git_send_email_confirm_options
+      " "" "${cur##--confirm=}"
+    return
+    ;;
+  --suppress-cc=*)
+    __gitcomp "
