@@ -1632,3 +1632,21 @@ __git_config_get_set_variables ()
 _git_config ()
 {
   local cur="${COMP_WORDS[COMP_CWORD]}"
+  local prv="${COMP_WORDS[COMP_CWORD-1]}"
+  case "$prv" in
+  branch.*.remote)
+    __gitcomp "$(__git_remotes)"
+    return
+    ;;
+  branch.*.merge)
+    __gitcomp "$(__git_refs)"
+    return
+    ;;
+  remote.*.fetch)
+    local remote="${prv#remote.}"
+    remote="${remote%.fetch}"
+    __gitcomp "$(__git_refs_remotes "$remote")"
+    return
+    ;;
+  remote.*.push)
+    local remote="${prv#remote.}"
