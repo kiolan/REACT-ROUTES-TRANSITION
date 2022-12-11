@@ -1650,3 +1650,19 @@ _git_config ()
     ;;
   remote.*.push)
     local remote="${prv#remote.}"
+    remote="${remote%.push}"
+    __gitcomp "$(git --git-dir="$(__gitdir)" \
+      for-each-ref --format='%(refname):%(refname)' \
+      refs/heads)"
+    return
+    ;;
+  pull.twohead|pull.octopus)
+    __git_compute_merge_strategies
+    __gitcomp "$__git_merge_strategies"
+    return
+    ;;
+  color.branch|color.diff|color.interactive|\
+  color.showbranch|color.status|color.ui)
+    __gitcomp "always never auto"
+    return
+    ;;
