@@ -1666,3 +1666,19 @@ _git_config ()
     __gitcomp "always never auto"
     return
     ;;
+  color.pager)
+    __gitcomp "false true"
+    return
+    ;;
+  color.*.*)
+    __gitcomp "
+      normal black red green yellow blue magenta cyan white
+      bold dim ul blink reverse
+      "
+    return
+    ;;
+  help.format)
+    __gitcomp "man info web html"
+    return
+    ;;
+  log.date)
