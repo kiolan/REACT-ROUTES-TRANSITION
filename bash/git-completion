@@ -1727,3 +1727,16 @@ _git_config ()
     local pfx="${cur%.*}."
     cur="${cur#*.}"
     __gitcomp "$(__git_heads)" "$pfx" "$cur" "."
+    return
+    ;;
+  guitool.*.*)
+    local pfx="${cur%.*}."
+    cur="${cur##*.}"
+    __gitcomp "
+      argprompt cmd confirm needsfile noconsole norescan
+      prompt revprompt revunmerged title
+      " "$pfx" "$cur"
+    return
+    ;;
+  difftool.*.*)
+    local pfx="${cur%.*}."
