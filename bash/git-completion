@@ -1697,3 +1697,23 @@ _git_config ()
     __gitcomp "$__git_send_email_suppresscc_options"
     return
     ;;
+  --get|--get-all|--unset|--unset-all)
+    __gitcomp "$(__git_config_get_set_variables)"
+    return
+    ;;
+  *.*)
+    COMPREPLY=()
+    return
+    ;;
+  esac
+  case "$cur" in
+  --*)
+    __gitcomp "
+      --global --system --file=
+      --list --replace-all
+      --get --get-all --get-regexp
+      --add --unset --unset-all
+      --remove-section --rename-section
+      "
+    return
+    ;;
