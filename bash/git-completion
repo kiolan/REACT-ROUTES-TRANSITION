@@ -1717,3 +1717,13 @@ _git_config ()
       "
     return
     ;;
+  branch.*.*)
+    local pfx="${cur%.*}."
+    cur="${cur##*.}"
+    __gitcomp "remote merge mergeoptions rebase" "$pfx" "$cur"
+    return
+    ;;
+  branch.*)
+    local pfx="${cur%.*}."
+    cur="${cur#*.}"
+    __gitcomp "$(__git_heads)" "$pfx" "$cur" "."
