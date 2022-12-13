@@ -1682,3 +1682,18 @@ _git_config ()
     return
     ;;
   log.date)
+    __gitcomp "$__git_log_date_formats"
+    return
+    ;;
+  sendemail.aliasesfiletype)
+    __gitcomp "mutt mailrc pine elm gnus"
+    return
+    ;;
+  sendemail.confirm)
+    __gitcomp "$__git_send_email_confirm_options"
+    return
+    ;;
+  sendemail.suppresscc)
+    __gitcomp "$__git_send_email_suppresscc_options"
+    return
+    ;;
