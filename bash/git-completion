@@ -1772,3 +1772,17 @@ _git_config ()
       " "$pfx" "$cur"
     return
     ;;
+  remote.*)
+    local pfx="${cur%.*}."
+    cur="${cur#*.}"
+    __gitcomp "$(__git_remotes)" "$pfx" "$cur" "."
+    return
+    ;;
+  url.*.*)
+    local pfx="${cur%.*}."
+    cur="${cur##*.}"
+    __gitcomp "insteadOf pushInsteadOf" "$pfx" "$cur"
+    return
+    ;;
+  esac
+  __gitcomp "
