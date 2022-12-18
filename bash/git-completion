@@ -1740,3 +1740,19 @@ _git_config ()
     ;;
   difftool.*.*)
     local pfx="${cur%.*}."
+    cur="${cur##*.}"
+    __gitcomp "cmd path" "$pfx" "$cur"
+    return
+    ;;
+  man.*.*)
+    local pfx="${cur%.*}."
+    cur="${cur##*.}"
+    __gitcomp "cmd path" "$pfx" "$cur"
+    return
+    ;;
+  mergetool.*.*)
+    local pfx="${cur%.*}."
+    cur="${cur##*.}"
+    __gitcomp "cmd path trustExitCode" "$pfx" "$cur"
+    return
+    ;;
