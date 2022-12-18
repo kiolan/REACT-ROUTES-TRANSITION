@@ -1756,3 +1756,19 @@ _git_config ()
     __gitcomp "cmd path trustExitCode" "$pfx" "$cur"
     return
     ;;
+  pager.*)
+    local pfx="${cur%.*}."
+    cur="${cur#*.}"
+    __git_compute_all_commands
+    __gitcomp "$__git_all_commands" "$pfx" "$cur"
+    return
+    ;;
+  remote.*.*)
+    local pfx="${cur%.*}."
+    cur="${cur##*.}"
+    __gitcomp "
+      url proxy fetch push mirror skipDefaultUpdate
+      receivepack uploadpack tagopt pushurl
+      " "$pfx" "$cur"
+    return
+    ;;
