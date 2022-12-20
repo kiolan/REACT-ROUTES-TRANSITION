@@ -1786,3 +1786,17 @@ _git_config ()
     ;;
   esac
   __gitcomp "
+    add.ignore-errors
+    alias.
+    apply.ignorewhitespace
+    apply.whitespace
+    branch.autosetupmerge
+    branch.autosetuprebase
+    clean.requireForce
+    color.branch
+    color.branch.current
+    color.branch.local
+    color.branch.plain
+    color.branch.remote
+    color.diff
+    color.diff.commit
