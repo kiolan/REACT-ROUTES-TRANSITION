@@ -1814,3 +1814,15 @@ _git_config ()
     color.interactive.help
     color.interactive.prompt
     color.pager
+    color.showbranch
+    color.status
+    color.status.added
+    color.status.changed
+    color.status.header
+    color.status.nobranch
+    color.status.untracked
+    color.status.updated
+    color.ui
+    commit.template
+    core.autocrlf
+    core.bare
