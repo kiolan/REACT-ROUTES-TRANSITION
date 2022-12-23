@@ -1858,3 +1858,17 @@ _git_config ()
     diff.renameLimit
     diff.renameLimit.
     diff.renames
+    diff.suppressBlankEmpty
+    diff.tool
+    diff.wordRegex
+    difftool.
+    difftool.prompt
+    fetch.unpackLimit
+    format.attach
+    format.cc
+    format.headers
+    format.numbered
+    format.pretty
+    format.signature
+    format.signoff
+    format.subjectprefix
