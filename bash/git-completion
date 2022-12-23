@@ -1841,3 +1841,20 @@ _git_config ()
     core.packedGitLimit
     core.packedGitWindowSize
     core.pager
+    core.preferSymlinkRefs
+    core.preloadindex
+    core.quotepath
+    core.repositoryFormatVersion
+    core.safecrlf
+    core.sharedRepository
+    core.symlinks
+    core.trustctime
+    core.warnAmbiguousRefs
+    core.whitespace
+    core.worktree
+    diff.autorefreshindex
+    diff.external
+    diff.mnemonicprefix
+    diff.renameLimit
+    diff.renameLimit.
+    diff.renames
