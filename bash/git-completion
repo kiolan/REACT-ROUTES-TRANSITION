@@ -1826,3 +1826,18 @@ _git_config ()
     commit.template
     core.autocrlf
     core.bare
+    core.compression
+    core.createObject
+    core.deltaBaseCacheLimit
+    core.editor
+    core.excludesfile
+    core.fileMode
+    core.fsyncobjectfiles
+    core.gitProxy
+    core.ignoreCygwinFSTricks
+    core.ignoreStat
+    core.logAllRefUpdates
+    core.loosecompression
+    core.packedGitLimit
+    core.packedGitWindowSize
+    core.pager
