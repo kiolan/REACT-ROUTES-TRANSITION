@@ -1882,3 +1882,15 @@ _git_config ()
     gc.reflogexpire
     gc.reflogexpireunreachable
     gc.rerereresolved
+    gc.rerereunresolved
+    gitcvs.allbinary
+    gitcvs.commitmsgannotation
+    gitcvs.dbTableNamePrefix
+    gitcvs.dbdriver
+    gitcvs.dbname
+    gitcvs.dbpass
+    gitcvs.dbuser
+    gitcvs.enabled
+    gitcvs.logfile
+    gitcvs.usecrlfattr
+    guitool.
