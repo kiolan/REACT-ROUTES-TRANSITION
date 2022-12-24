@@ -1872,3 +1872,13 @@ _git_config ()
     format.signature
     format.signoff
     format.subjectprefix
+    format.suffix
+    format.thread
+    gc.aggressiveWindow
+    gc.auto
+    gc.autopacklimit
+    gc.packrefs
+    gc.pruneexpire
+    gc.reflogexpire
+    gc.reflogexpireunreachable
+    gc.rerereresolved
