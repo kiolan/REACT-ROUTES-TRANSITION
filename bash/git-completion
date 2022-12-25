@@ -1894,3 +1894,14 @@ _git_config ()
     gitcvs.logfile
     gitcvs.usecrlfattr
     guitool.
+    gui.blamehistoryctx
+    gui.commitmsgwidth
+    gui.copyblamethreshold
+    gui.diffcontext
+    gui.encoding
+    gui.fastcopyblame
+    gui.matchtrackingbranch
+    gui.newbranchtemplate
+    gui.pruneduringfetch
+    gui.spellingdictionary
+    gui.trustmtime
