@@ -1905,3 +1905,12 @@ _git_config ()
     gui.pruneduringfetch
     gui.spellingdictionary
     gui.trustmtime
+    help.autocorrect
+    help.browser
+    help.format
+    http.lowSpeedLimit
+    http.lowSpeedTime
+    http.maxRequests
+    http.noEPSV
+    http.proxy
+    http.sslCAInfo
