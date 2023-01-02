@@ -1928,3 +1928,19 @@ _git_config ()
     imap.sslverify
     imap.tunnel
     imap.user
+    instaweb.browser
+    instaweb.httpd
+    instaweb.local
+    instaweb.modulepath
+    instaweb.port
+    interactive.singlekey
+    log.date
+    log.showroot
+    mailmap.file
+    man.
+    man.viewer
+    merge.conflictstyle
+    merge.log
+    merge.renameLimit
+    merge.stat
+    merge.tool
