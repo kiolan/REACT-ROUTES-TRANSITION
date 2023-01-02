@@ -1967,3 +1967,23 @@ _git_config ()
     receive.denyNonFastForwards
     receive.fsckObjects
     receive.unpackLimit
+    repack.usedeltabaseoffset
+    rerere.autoupdate
+    rerere.enabled
+    sendemail.aliasesfile
+    sendemail.aliasesfiletype
+    sendemail.bcc
+    sendemail.cc
+    sendemail.cccmd
+    sendemail.chainreplyto
+    sendemail.confirm
+    sendemail.envelopesender
+    sendemail.multiedit
+    sendemail.signedoffbycc
+    sendemail.smtpencryption
+    sendemail.smtppass
+    sendemail.smtpserver
+    sendemail.smtpserverport
+    sendemail.smtpuser
+    sendemail.suppresscc
+    sendemail.suppressfrom
