@@ -1914,3 +1914,17 @@ _git_config ()
     http.noEPSV
     http.proxy
     http.sslCAInfo
+    http.sslCAPath
+    http.sslCert
+    http.sslKey
+    http.sslVerify
+    i18n.commitEncoding
+    i18n.logOutputEncoding
+    imap.folder
+    imap.host
+    imap.pass
+    imap.port
+    imap.preformattedHTML
+    imap.sslverify
+    imap.tunnel
+    imap.user
