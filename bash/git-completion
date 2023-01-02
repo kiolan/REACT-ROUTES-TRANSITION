@@ -1944,3 +1944,26 @@ _git_config ()
     merge.renameLimit
     merge.stat
     merge.tool
+    merge.verbosity
+    mergetool.
+    mergetool.keepBackup
+    mergetool.prompt
+    pack.compression
+    pack.deltaCacheLimit
+    pack.deltaCacheSize
+    pack.depth
+    pack.indexVersion
+    pack.packSizeLimit
+    pack.threads
+    pack.window
+    pack.windowMemory
+    pager.
+    pull.octopus
+    pull.twohead
+    push.default
+    rebase.stat
+    receive.denyCurrentBranch
+    receive.denyDeletes
+    receive.denyNonFastForwards
+    receive.fsckObjects
+    receive.unpackLimit
