@@ -1987,3 +1987,17 @@ _git_config ()
     sendemail.smtpuser
     sendemail.suppresscc
     sendemail.suppressfrom
+    sendemail.thread
+    sendemail.to
+    sendemail.validate
+    showbranch.default
+    status.relativePaths
+    status.showUntrackedFiles
+    tar.umask
+    transfer.unpackLimit
+    url.
+    user.email
+    user.name
+    user.signingkey
+    web.browser
+    branch. remote.
