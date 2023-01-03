@@ -2018,3 +2018,19 @@ _git_remote ()
     __gitcomp "$(__git_remotes)"
     ;;
   update)
+    local i c='' IFS=$'\n'
+    for i in $(git --git-dir="$(__gitdir)" config --get-regexp "remotes\..*" 2>/dev/null); do
+      i="${i#remotes.}"
+      c="$c ${i/ */}"
+    done
+    __gitcomp "$c"
+    ;;
+  *)
+    COMPREPLY=()
+    ;;
+  esac
+}
+
+_git_replace ()
+{
+  __gitcomp "$(__git_refs)"
