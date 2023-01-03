@@ -2034,3 +2034,18 @@ _git_remote ()
 _git_replace ()
 {
   __gitcomp "$(__git_refs)"
+}
+
+_git_reset ()
+{
+  __git_has_doubledash && return
+
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --*)
+    __gitcomp "--merge --mixed --hard --soft --patch"
+    return
+    ;;
+  esac
+  __gitcomp "$(__git_refs)"
+}
