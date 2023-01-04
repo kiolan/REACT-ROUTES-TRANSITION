@@ -2069,3 +2069,20 @@ _git_rm ()
   local cur="${COMP_WORDS[COMP_CWORD]}"
   case "$cur" in
   --*)
+    __gitcomp "--cached --dry-run --ignore-unmatch --quiet"
+    return
+    ;;
+  esac
+  COMPREPLY=()
+}
+
+_git_shortlog ()
+{
+  __git_has_doubledash && return
+
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --*)
+    __gitcomp "
+      $__git_log_common_options
+      $__git_log_shortlog_options
