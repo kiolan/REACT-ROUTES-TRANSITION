@@ -2086,3 +2086,22 @@ _git_shortlog ()
     __gitcomp "
       $__git_log_common_options
       $__git_log_shortlog_options
+      --numbered --summary
+      "
+    return
+    ;;
+  esac
+  __git_complete_revlist
+}
+
+_git_show ()
+{
+  __git_has_doubledash && return
+
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  case "$cur" in
+  --pretty=*)
+    __gitcomp "$__git_log_pretty_formats
+      " "" "${cur##--pretty=}"
+    return
+    ;;
