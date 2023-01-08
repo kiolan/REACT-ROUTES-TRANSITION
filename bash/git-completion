@@ -2152,3 +2152,21 @@ _git_stash ()
       if [ -z "$(__git_find_on_cmdline "$save_opts")" ]; then
         __gitcomp "$subcommands"
       else
+        COMPREPLY=()
+      fi
+      ;;
+    esac
+  else
+    case "$subcommand,$cur" in
+    save,--*)
+      __gitcomp "$save_opts"
+      ;;
+    apply,--*|pop,--*)
+      __gitcomp "--index --quiet"
+      ;;
+    show,--*|drop,--*|branch,--*)
+      COMPREPLY=()
+      ;;
+    show,*|apply,*|drop,*|pop,*|branch,*)
+      __gitcomp "$(git --git-dir="$(__gitdir)" stash list \
+          | sed -n -e 's/:.*//p')"
