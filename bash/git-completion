@@ -2170,3 +2170,14 @@ _git_stash ()
     show,*|apply,*|drop,*|pop,*|branch,*)
       __gitcomp "$(git --git-dir="$(__gitdir)" stash list \
           | sed -n -e 's/:.*//p')"
+      ;;
+    *)
+      COMPREPLY=()
+      ;;
+    esac
+  fi
+}
+
+_git_submodule ()
+{
+  __git_has_doubledash && return
