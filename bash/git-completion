@@ -2225,3 +2225,23 @@ _git_svn ()
       --add-author-from $remote_opts
       "
     local cmt_opts="
+      --edit --rmdir --find-copies-harder --copy-similarity=
+      "
+
+    local cur="${COMP_WORDS[COMP_CWORD]}"
+    case "$subcommand,$cur" in
+    fetch,--*)
+      __gitcomp "--revision= --fetch-all $fc_opts"
+      ;;
+    clone,--*)
+      __gitcomp "--revision= $fc_opts $init_opts"
+      ;;
+    init,--*)
+      __gitcomp "$init_opts"
+      ;;
+    dcommit,--*)
+      __gitcomp "
+        --merge --strategy= --verbose --dry-run
+        --fetch-all --no-rebase --commit-url
+        --revision $cmt_opts $fc_opts
+        "
