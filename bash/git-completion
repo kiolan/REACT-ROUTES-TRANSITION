@@ -2190,3 +2190,20 @@ _git_submodule ()
       __gitcomp "--quiet --cached"
       ;;
     *)
+      __gitcomp "$subcommands"
+      ;;
+    esac
+    return
+  fi
+}
+
+_git_svn ()
+{
+  local subcommands="
+    init fetch clone rebase dcommit log find-rev
+    set-tree commit-diff info create-ignore propget
+    proplist show-ignore show-externals branch tag blame
+    migrate mkdirs reset gc
+    "
+  local subcommand="$(__git_find_on_cmdline "$subcommands")"
+  if [ -z "$subcommand" ]; then
