@@ -2181,3 +2181,12 @@ _git_stash ()
 _git_submodule ()
 {
   __git_has_doubledash && return
+
+  local subcommands="add status init update summary foreach sync"
+  if [ -z "$(__git_find_on_cmdline "$subcommands")" ]; then
+    local cur="${COMP_WORDS[COMP_CWORD]}"
+    case "$cur" in
+    --*)
+      __gitcomp "--quiet --cached"
+      ;;
+    *)
