@@ -2207,3 +2207,21 @@ _git_svn ()
     "
   local subcommand="$(__git_find_on_cmdline "$subcommands")"
   if [ -z "$subcommand" ]; then
+    __gitcomp "$subcommands"
+  else
+    local remote_opts="--username= --config-dir= --no-auth-cache"
+    local fc_opts="
+      --follow-parent --authors-file= --repack=
+      --no-metadata --use-svm-props --use-svnsync-props
+      --log-window-size= --no-checkout --quiet
+      --repack-flags --use-log-author --localtime
+      --ignore-paths= $remote_opts
+      "
+    local init_opts="
+      --template= --shared= --trunk= --tags=
+      --branches= --stdlayout --minimize-url
+      --no-metadata --use-svm-props --use-svnsync-props
+      --rewrite-root= --prefix= --use-log-author
+      --add-author-from $remote_opts
+      "
+    local cmt_opts="
