@@ -2259,3 +2259,14 @@ _git_svn ()
         --oneline --show-commit --non-recursive
         --authors-file= --color
         "
+      ;;
+    rebase,--*)
+      __gitcomp "
+        --merge --verbose --strategy= --local
+        --fetch-all --dry-run $fc_opts
+        "
+      ;;
+    commit-diff,--*)
+      __gitcomp "--message= --file= --revision= $cmt_opts"
+      ;;
+    info,--*)
