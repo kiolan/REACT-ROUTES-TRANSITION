@@ -2294,3 +2294,16 @@ _git_svn ()
       COMPREPLY=()
       ;;
     esac
+  fi
+}
+
+_git_tag ()
+{
+  local i c=1 f=0
+  while [ $c -lt $COMP_CWORD ]; do
+    i="${COMP_WORDS[c]}"
+    case "$i" in
+    -d|-v)
+      __gitcomp "$(__git_tags)"
+      return
+      ;;
