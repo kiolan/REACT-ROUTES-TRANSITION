@@ -2307,3 +2307,18 @@ _git_tag ()
       __gitcomp "$(__git_tags)"
       return
       ;;
+    -f)
+      f=1
+      ;;
+    esac
+    c=$((++c))
+  done
+
+  case "${COMP_WORDS[COMP_CWORD-1]}" in
+  -m|-F)
+    COMPREPLY=()
+    ;;
+  -*|tag)
+    if [ $f = 1 ]; then
+      __gitcomp "$(__git_tags)"
+    else
