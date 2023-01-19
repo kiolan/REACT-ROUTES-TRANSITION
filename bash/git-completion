@@ -2322,3 +2322,16 @@ _git_tag ()
     if [ $f = 1 ]; then
       __gitcomp "$(__git_tags)"
     else
+      COMPREPLY=()
+    fi
+    ;;
+  *)
+    __gitcomp "$(__git_refs)"
+    ;;
+  esac
+}
+
+_git_whatchanged ()
+{
+  _git_log
+}
