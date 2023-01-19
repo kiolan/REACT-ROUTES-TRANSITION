@@ -2351,3 +2351,12 @@ _git ()
     esac
     c=$((++c))
   done
+
+  if [ -z "$command" ]; then
+    case "${COMP_WORDS[COMP_CWORD]}" in
+    --*)   __gitcomp "
+      --paginate
+      --no-pager
+      --git-dir=
+      --bare
+      --version
