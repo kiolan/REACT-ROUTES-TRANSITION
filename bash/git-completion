@@ -2360,3 +2360,19 @@ _git ()
       --git-dir=
       --bare
       --version
+      --exec-path
+      --html-path
+      --work-tree=
+      --help
+      "
+      ;;
+    *)     __git_compute_porcelain_commands
+           __gitcomp "$__git_porcelain_commands $(__git_aliases)" ;;
+    esac
+    return
+  fi
+
+  local completion_func="_git_${command//-/_}"
+  declare -F $completion_func >/dev/null && $completion_func && return
+
+  local expansion=$(__git_aliased_command "$command")
