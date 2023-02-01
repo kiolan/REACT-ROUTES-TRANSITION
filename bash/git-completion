@@ -2376,3 +2376,30 @@ _git ()
   declare -F $completion_func >/dev/null && $completion_func && return
 
   local expansion=$(__git_aliased_command "$command")
+  if [ -n "$expansion" ]; then
+    completion_func="_git_${expansion//-/_}"
+    declare -F $completion_func >/dev/null && $completion_func
+  fi
+}
+
+_gitk ()
+{
+  __git_has_doubledash && return
+
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  local g="$(__gitdir)"
+  local merge=""
+  if [ -f "$g/MERGE_HEAD" ]; then
+    merge="--merge"
+  fi
+  case "$cur" in
+  --*)
+    __gitcomp "
+      $__git_log_common_options
+      $__git_log_gitk_options
+      $merge
+      "
+    return
+    ;;
+  esac
+  __git_complete_revlist
