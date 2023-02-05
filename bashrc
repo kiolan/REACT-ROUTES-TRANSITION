@@ -1,1 +1,2 @@
-. ~/bin/dotfiles/b
+. ~/bin/dotfiles/bash/env
+. ~/bin/dotf
