@@ -1,2 +1,3 @@
 . ~/bin/dotfiles/bash/env
-. ~/bin/dotfiles/bash/co
+. ~/bin/dotfiles/bash/config
+. ~/bin/
