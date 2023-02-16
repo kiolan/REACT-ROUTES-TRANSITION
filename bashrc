@@ -2,4 +2,4 @@
 . ~/bin/dotfiles/bash/config
 . ~/bin/dotfiles/bash/functions
 . ~/bin/dotfiles/bash/aliases
-. ~/bin/dotfiles/ba
+. ~/bin/dotfiles/bash/git-completi
