@@ -4,4 +4,4 @@
 . ~/bin/dotfiles/bash/aliases
 . ~/bin/dotfiles/bash/git-completion
 
-# Stuff you dont wa
+# Stuff you dont want to be in gi
