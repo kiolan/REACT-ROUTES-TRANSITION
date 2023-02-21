@@ -4,4 +4,4 @@
 . ~/bin/dotfiles/bash/aliases
 . ~/bin/dotfiles/bash/git-completion
 
-# Stuff you dont want to be in git repo can go in here and you ca
+# Stuff you dont want to be in git repo can go in here and you can just git ign
