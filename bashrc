@@ -5,4 +5,4 @@
 . ~/bin/dotfiles/bash/git-completion
 
 # Stuff you dont want to be in git repo can go in here and you can just git ignore
-[[ -f ~/bin/dotf
+[[ -f ~/bin/dotfiles/bash/p
